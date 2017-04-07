@@ -1,4 +1,6 @@
 ###Function to calculate the log10 of the CUmulative Invasion Pressure (CIP)
+###dependency on dplyr; requires appropriate .csv data files (plant and animal counts
+###and huc8 IDs) to be loaded in working directory
 
 calculatelogCIP <- function (filename, huc8file, periods) {
     DB <- tbl_df(read.csv(filename, header = TRUE))
