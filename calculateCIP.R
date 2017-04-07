@@ -1,4 +1,8 @@
-CIPb <- function (filename, huc8file, periods) {
+###Function to calculate the CUmulative Invasion Pressure (CIP)
+###dependency on dplyr; requires appropriate .csv data files (plant and animal counts
+###and huc8 IDs) to be loaded in working directory
+
+calculateCIP <- function (filename, huc8file, periods) {
     DB <- tbl_df(read.csv(filename, header = TRUE))
     temporalCIPs <- tbl_df(read.csv(huc8file, header = TRUE))
     for (i in 1:length(periods)) {
