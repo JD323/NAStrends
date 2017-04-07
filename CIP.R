@@ -1,3 +1,5 @@
+###Some partial code for developing a CIP calculator
+
 test2016 <- group_by(alltaxa2016, HUC8, sciName) %>% mutate(minyear = min(year))
 test2016 <- mutate(test2016, time = 2017-minyear)
 test2016 <- test2016 %>% group_by(HUC8, sciName) %>% distinct(sciName, .keep_all = TRUE)
